@@ -1,0 +1,686 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.png?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="前言有想过为什么要编码吗？痴迷技术？为了收入？为了妹纸？还是想做一些有用的东西？如果能开发一款能方便到自己的同时还能方便到别人的应用那是件多么cool的事，难道不是么？^_^如果你也有这种想法或许我的一点小经验会对你有所帮助。Android面试复习源码传送门
+灵感寻找做一个细心的人，多留意身边的每一件小事，可能每一个“不方便”都将会成为创作灵感，它们就像蚊子，虽然小，但是到处都有。就看要不要抓住它">
+<meta property="og:type" content="article">
+<meta property="og:title" content="做一款属于自己的实用小应用">
+<meta property="og:url" content="http://v-sounds.com/2016/03/11/作品/做一款属于自己的实用小应用/index.html">
+<meta property="og:site_name" content="V-Sounds">
+<meta property="og:description" content="前言有想过为什么要编码吗？痴迷技术？为了收入？为了妹纸？还是想做一些有用的东西？如果能开发一款能方便到自己的同时还能方便到别人的应用那是件多么cool的事，难道不是么？^_^如果你也有这种想法或许我的一点小经验会对你有所帮助。Android面试复习源码传送门
+灵感寻找做一个细心的人，多留意身边的每一件小事，可能每一个“不方便”都将会成为创作灵感，它们就像蚊子，虽然小，但是到处都有。就看要不要抓住它">
+<meta property="og:updated_time" content="2016-04-13T15:44:51.946Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="做一款属于自己的实用小应用">
+<meta name="twitter:description" content="前言有想过为什么要编码吗？痴迷技术？为了收入？为了妹纸？还是想做一些有用的东西？如果能开发一款能方便到自己的同时还能方便到别人的应用那是件多么cool的事，难道不是么？^_^如果你也有这种想法或许我的一点小经验会对你有所帮助。Android面试复习源码传送门
+灵感寻找做一个细心的人，多留意身边的每一件小事，可能每一个“不方便”都将会成为创作灵感，它们就像蚊子，虽然小，但是到处都有。就看要不要抓住它">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 做一款属于自己的实用小应用 | V-Sounds </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?6a07adccecf66d0b06d8a5eeb8ac2873";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">V-Sounds</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">I am a Coder and a Beatboxer</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '9rP_C-BDQ7zed6wsuLMP','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                做一款属于自己的实用小应用
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-11T19:30:47+08:00" content="2016-03-11">
+              2016-03-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/作品/" itemprop="url" rel="index">
+                    <span itemprop="name">作品</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/11/作品/做一款属于自己的实用小应用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/11/作品/做一款属于自己的实用小应用/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>有想过为什么要编码吗？痴迷技术？为了收入？为了妹纸？还是想做一些有用的东西？如果能开发一款能方便到自己的同时还能方便到别人的应用那是件多么cool的事，难道不是么？^_^如果你也有这种想法或许我的一点小经验会对你有所帮助。<br><strong><a href="https://github.com/envyfan/AndroidReview/" target="_blank" rel="external">Android面试复习源码传送门</a></strong></p>
+<h2 id="灵感寻找"><a href="#灵感寻找" class="headerlink" title="灵感寻找"></a>灵感寻找</h2><p>做一个细心的人，多留意身边的每一件小事，可能每一个“不方便”都将会成为创作灵感，它们就像蚊子，虽然小，但是到处都有。就看要不要抓住它,能不能抓住它。要是抓住了就不要犹豫，马上动手，不然它就会毫不留情地飞走，不给你留下当初想抓住它的那股强烈的激情。</p>
+<p>在我失业找工作的那段日子里，面试成为了我的日常任务。一场面试平均要3小时，其中1小时在车上路上，2小时在笔试面试上。几乎每次面试都会浪费2小时（来回）。我想把那些浪费的时间利用起来。在车上路上看书？技术书都好大好笨重不好拿，在车上路上用手机浏览网上的技术文章？知识太分散而且手机是3G的慢得不得了。于是就萌生了一个想法：我想要一款能够把Android知识点分好类，随时随地能通过手机浏览，并且它要有缓存功能，在网络不好的地方能打开缓存过的文章，最好还有一些关于笔试的测试题目，帮助知识点回忆。可惜搜遍了应用市场都找不到合胃口的应用。然而我就毫不犹豫地决定要弄一款这样的应用方便自己，如果它还能方便别人那么就更好了。</p>
+<h2 id="需求整理"><a href="#需求整理" class="headerlink" title="需求整理"></a>需求整理</h2><p><strong>1、收集整理</strong> </p>
+<p>萌生了创作想法就应该马上用记事本把功能点全部从大脑里拿出来，哪怕很零散也没关系，把它们罗列出来后就可以对功能点进行筛选分类。一类的功能可以组成一个功能模块，一些锦上添花的功能可以暂时筛选掉，等日后版本迭代时再加上。</p>
+<p>“Android面试复习”当初在我脑海里是一堆混乱的需求：1、我能通过手机浏览博文，2、我能通过电脑把我认为优秀的博文收集起来并且可以通过管理把博文分类组织成各个知识点存放。3、我手机没4g我希望能够缓存我看过的文章，如果能够事先在WIFI环境下，下载好我感兴趣的博文就更好了。4、我想有一个知识点自测的功能，这样就能通测试的方式回忆知识点，如果在此基础上还能收藏易错题方便自己随时查阅那就更好了。5、……6、……等等。当需求罗列出来后下一步就可以整理出功能点了。</p>
+<p><strong>2、Story提取</strong></p>
+<p>在整理需求的时候不妨尝试用说故事的方式描述一下用户在使用应用时的场景，当故事描述完毕那么功能点就很自然而然地浮现出来，就好比如下面这段Story。</p>
+<p>在周一的上午，小威应约去一间互联网公司面试Android开发，目的地离他的住处大概有一小时左右的车程，在上地铁后小威打开了“Android面试复习”应用，进行笔试题自测。在测试的过程中他发现自己对Activity的理解不太清晰，于是就把应用切换到知识点模块查阅了一些关于Activity的博文，虽然在地铁上小威3g网络的手机浏览博文加载起来很不给力，但他早早地已经把博文缓存到手机里了，即使没网络依然不影响阅读，经过细心阅读和思考小威认为这块的知识点已经理解得差不多，然而继续回到笔试题目自测。面试结束后，小威来到一间餐厅打算吃个饭好好休息下，勤奋的小威争分夺秒地拿起手机浏览感兴趣的Android技术博文，其中一篇关于Activity启动模式全解释的博文吸引了他，然而他打算回家后把它通过编辑器发布到Android面试复习的移动云上，以便以后在外能随时随地看到这篇好文。</p>
+<h2 id="制作原型"><a href="#制作原型" class="headerlink" title="制作原型"></a>制作原型</h2><p>制作原型的目的是为了更好的理解需求，更好地去设计应用交互，因此，先别着急着啪啪啪打代码，这一步是必不可少的哦。至于设计交互嘛，多点了解谷歌的MD设计风格（规范上面有很多可以参考的东西，比如iocn大小、字体大小、配色，特别是配色我觉得特有用），也可以去参考优秀应用的交互是怎么做的，作者这块比较薄弱就不献丑了QAQ。原型制作工具，个人比较推荐使用像墨刀、Mockplus这种快速原型制作工具，而不太推荐使用Axure。虽然Axure很强大，但是入门门槛也比较高，墨刀那类就够了，毕竟我们不是产品设计，只要把交互弄出来自己看得懂就可以了。<strong><a href="https://modao.cc/app/nfTVWxjHlBHuIEFRY7feSoao5Gk2MTf" target="_blank" rel="external">“Android面试复习”原型传送门</a></strong></p>
+<h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>从原型界面可以看出，“Android面试复习”实现起来是比较简单的值得一说的只有以下几个点：</p>
+<ol>
+<li><p>整个应用的主体UI框架是一个MainActivity里面包含着一个FragmentTabHost并承载着“复习”、“测试”、“其他”三个Fragment。</p>
+</li>
+<li><p>基类BasePutToRefreshFragment封装了整个下拉刷新、上拉加载、缓存处理等等逻辑，应用中凡是能刷新加载的列表都是继承了该Fragment。</p>
+</li>
+<li><p>缓存处理是根据网络环境通过序列化、反序列化实体而实现。</p>
+</li>
+</ol>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>测试是个很重要的环节，如果这一环节处理不好，辛辛苦苦开发出来的小应用上线后可能会出现很多小问题，而这些小问题很容易会让用户对应用失去信心（也就是面临着秒删）“Android面试复习”发布前只做做了云测和多个版本的模拟器运行测试，可见在这方面作者是懈怠了，等发布出来才发现它在6.0上跑存在权限问题，导致6.0的用户要到系统设置手动开启权限才能用，效果非常不好。所以大家在做多版本模拟器测试时要认真仔细不要遗漏版本哦。</p>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p>感谢您的浏览，希望我的经验能对您有用。如有问题欢迎指教。</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/07/作品/AndroidReview (Android面试复习)/" rel="next" title="AndroidReview (Android面试复习)">
+                <i class="fa fa-chevron-left"></i> AndroidReview (Android面试复习)
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/03/11/作品/做一款属于自己的实用小应用/"
+     data-title="做一款属于自己的实用小应用"
+     data-content=""
+     data-url="http://v-sounds.com/2016/03/11/作品/做一款属于自己的实用小应用/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/03/11/作品/做一款属于自己的实用小应用/"
+           data-title="做一款属于自己的实用小应用" data-url="http://v-sounds.com/2016/03/11/作品/做一款属于自己的实用小应用/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/icon.png"
+               alt="Vv" />
+          <p class="site-author-name" itemprop="name">Vv</p>
+          <p class="site-description motion-element" itemprop="description">My Sounds <br> I am a Coder and a Beatboxer</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/82387532" target="_blank">
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/envyfan" target="_blank">
+                  
+                  Github
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#灵感寻找"><span class="nav-number">2.</span> <span class="nav-text">灵感寻找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需求整理"><span class="nav-number">3.</span> <span class="nav-text">需求整理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#制作原型"><span class="nav-number">4.</span> <span class="nav-text">制作原型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发"><span class="nav-number">5.</span> <span class="nav-text">开发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">6.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢"><span class="nav-number">7.</span> <span class="nav-text">感谢</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Vv</span>
+</div>
+<!--
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+ -->
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"v-sounds"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
